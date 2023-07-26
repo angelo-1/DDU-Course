@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+    <style>
+        table{
+            background-color: rgb(43, 57, 144);
+            color: #fff;
+            border: 10px solid #fff;
+            margin: 70px;
+            margin-top: 10px;
+        }
+        tr{
+            text-align: center;
+            border: 5px solid #fff;
+        }
+        td{
+            height: 40px;
+            border: 5px inset #fff;
+            padding-left: 10px;
+            
+        }
+        th{
+            color: rgb(255, 255, 255);
+            background-color: #000;
+            width: 80px;
+            height: 40px;
+            font-size: 20px;
+            border: 5px outset #fff;
+        }
+        td:hover{
+            background-color: #000;
+            border: 5px ridge #fff;
+        }
+        tr:nth-child(odd){
+            background-color: rgb(41, 71, 119);
+        }
+        th:hover{
+            border: 5px groove #fff;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table cellspacing="5px" cellpadding="5px">
+        <caption style=" font-size:larger;background-color: rgb(22, 21, 21);"><h3><b>Time Table</b></h3></caption>
+<thead>
+        <tr >
+            <th><sub>DAY</sub>\<sup>Period</sup></th>
+            <th>9am-10am</th>
+            <th>10am-11am</th>
+            <th>11am-11:15am</th>
+            <th>11:15am-12:15pm</th>
+            <th>12:15pm-1:15pm</th>
+            <th>1:15pm-2pm</th>
+            <th>2pm-3pm</th>
+            <th>3pm-4pm</th>
+            <th>4pm-4:30pm</th>
+            <th>4:30pm-5:30pm</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>Monday</th>
+            <td>Subject1</td>
+            <td>Subject2</td>
+            <td rowspan="6" align="center">B<br/>R<br/>E<br>A<br>K</td>
+            <td>Subject3</td>
+            <td>Subject4</td>
+            <td rowspan="6" align="center">L<br/>U<br/>N<br>C<br>H</td>
+            <td>Subject5</td>
+            <td>Subject6</td>
+            <td rowspan="6" align="center">B<br/>R<br/>E<br>A<br>K</td>
+            <td>Subject7</td>
+        </tr>
+        <tr>
+            <th>Tuesday</th>
+            <td colspan="2">Subject1</td>
+            <td>Subject3</td>
+            <td>Subject4</td>
+            <td>Subject5</td>
+            <td>Subject6</td>
+            <td>Subject7</td>
+        </tr>
+        <tr>
+            <th>Wednesday</th>
+            <td>Subject1</td>
+            <td>Subject2</td>
+            <td>Subject3</td>
+            <td>Subject4</td>
+            <td>Subject5</td>
+            <td>Subject6</td>
+            <td>Subject7</td>
+        </tr>
+        <tr>
+            <th>Thursday</th>
+            <td>Subject1</td>
+            <td>Subject2</td>
+            <td colspan="2">Subject3</td>
+            <td>Subject5</td>
+            <td>Subject6</td>
+            <td>Subject7</td>
+        </tr>
+        <tr>
+            <th>Friday</th>
+            <td>Subject1</td>
+            <td>Subject2</td>
+            <td>Subject3</td>
+            <td>Subject4</td>
+            <td>Subject5</td>
+            <td>Subject6</td>
+            <td>Subject7</td>
+        </tr>
+        <tr>
+            <th>Saturday</th>
+            <td>Subject1</td>
+            <td>Subject2</td>
+            <td>Subject3</td>
+            <td>Subject4</td>
+            <td>Subject5</td>
+            <td>Subject6</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position Props</title>
+    <style>
+        .div1{
+            background-color: aliceblue;
+        }
+        .pabsolute{
+            background-color: blueviolet;
+            margin: 100px;
+            padding: 60px;
+            height: 500px;
+            
+        }
+        .eabsolute{
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+            border: 2px solid red;
+            
+        }
+        .eabsolute1{
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+            border: 2px solid red;
+            position: absolute;
+            bottom: -200px;
+           
+
+        }
+        .prelative{
+            background-color: blueviolet;
+            margin: 100px;
+            padding: 60px;
+            position: relative;
+            top: 200px;
+            height: 500px;
+            
+        }
+        .erelative{
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+            border: 2px solid red;
+           
+        }
+        .erelative1{
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+            border: 2px solid red;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+    <div class="pabsolute">
+        <div class="eabsolute1">Hello1</div>
+        <div class="eabsolute">Hello</div>
+        <div class="eabsolute">Hello</div>
+        <div class="eabsolute">Hello</div>
+    </div>
+    <div class="prelative">
+        <div class="erelative1">Hello</div>
+        <div class="erelative">Hello</div>
+        <div class="erelative">Hello</div>
+        <div class="erelative">Hello</div>
+    </div>
+    </div>
+</body>
+</html>

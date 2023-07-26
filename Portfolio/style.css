@@ -1,0 +1,10 @@
+body{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+}
+h4{
+    color: #fff;
+    text-align: center;
+}
+
