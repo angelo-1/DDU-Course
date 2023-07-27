@@ -7,7 +7,7 @@
     <title>forms</title>
     <style>
         *{
-            line-height: 30px;
+            line-height: 20px;
         }
         form{
             border: 2px solid #000;
@@ -17,17 +17,34 @@
             margin-left: 150px;
             margin-right: 150px;
             width: 400px;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
             
         }
+        input[type=submit]{
+            background-color: aquamarine;
+            border-radius: 20px;
+            margin: 10px;
+        }
+        input[type=reset]{
+            background-color: aquamarine;
+            border-radius: 20px;
+            margin: 10px;
+        }
+        /* input[type=radio]{
+            position: absolute;
+            float: right ;
+        } */
     </style>
 </head>
 <body>
     <form method="post" action="#" target="_blank">
         <h1 style="text-align: center;">This is a form</h1>
-        <label>Name:</label> <br> <input type="text" name="name" placeholder="enter yuor name" required><br>
-        <label>password:</label> <br> <input type="password" name="password" placeholder="enter yuor password" required><br>
-        <label>Email:</label> <br> <input type="email" name="email" placeholder="enter yuor Email" required><br>
-        <label>Phone:</label> <br> <input type="number" name="phone" placeholder="enter yuor Phone number" required><br>
+        <label>Name:</label> <br> <input type="text" name="name" placeholder="enter your name" required><br>
+        <label>password:</label> <br> <input type="password" name="password" placeholder="enter your password" required><br>
+        <label>Email:</label> <br> <input type="email" name="email" placeholder="enter your Email" required><br>
+        <label>Phone:</label> <br> <input type="number" name="phone" placeholder="enter your Phone number" required><br>
         <label >Adress:</label> <br> <textarea name="" id="" cols="20px" rows="3px"></textarea> <br>
         <label >Files:</label> <br> <input type="file"><br>
         <label >Time:</label> <br> <input type="time"><br>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+         *{
+            line-height: 25px;
+            font-family: sans-serif;
+            
+        }
+        body{
+           background-color: #45317b;
+           position: absolute;
+           align-items: center;
+           
+        }
+        .div-1{
+            height: 650px;
+            width: 500px;
+            background-color: #fff;
+            margin-left: 500px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+
+        }
+        input[type=submit]{
+            margin-top: 30px;
+            background-color: #0b7146;
+            color: #fff;
+            font-size: 20px;
+            border-radius: 5px;
+            box-shadow: inset;
+            height: 40px;
+        }
+        input{
+            border-radius: 5px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+        }
+        input[type=submit]:hover{
+            background-color: #fff;
+            color: #000;
+            border: 3px solid #0b7146;
+        }
+        input[type=submit]:focus{
+            background-color: #0b7146;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-1" >
+        <form method="post" action="#" target="_blank">
+            <h2 style="text-align: center; color: #45317b; font-size: 40px;">Sign Up</h2>
+            <h4 style="text-align: center; margin-top: -20px;">It's free and only takes a minute</h4>
+            <label >First Name</label>
+            <input type="text" required "><br>
+            <label >Last Name</label>
+            <input type="text" required><br>
+            <label >Email</label>
+            <input type="email" required><br>
+            <label >Password</label>
+            <input type="password" required><br>
+            <label >Confirm Password</label>
+            <input type="password" required>
+            <input type="submit">
+            <p style="text-align: center;">By Clicking the Sign Up button you agree to our <br> <a href="">Terms and Conditions </a> and <a href=""> Policy Privacy</a> </p>
+        </form>
+    </div>
+    <p style="color: #fff; margin-left: 630px; ">Already have an Account? <a href="#" style="color: #0b7146;">Login here</a></p>
+</body>
+</html>
