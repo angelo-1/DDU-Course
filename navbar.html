@@ -10,6 +10,9 @@
             padding: 0px;
             margin: 0px;
         }
+        body{
+            background-color: black;
+        }
         .navbar{
             background-color: blue;
             background-attachment: fixed;
@@ -34,6 +37,46 @@
         li a:hover{
             background-color: rgba(0, 0, 0, 0.623);
         }
+        .sidebar{
+            background-color: rgb(0, 255, 0);
+            background-attachment: fixed;
+            overflow: visible;
+            width: 200px;
+        }
+        .sidebar ul{
+            list-style-type: none;
+            padding: 10px;
+        }
+        .sidebar ul li{
+            display: block;
+        }
+        .sidebar ul li a{
+            display: block;
+        }
+        .drpdwn{
+            position: relative;
+            display: inline-block;
+        }
+        .drpdwn-content{
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 160px;
+            z-index: 1;
+            margin-left: 50%;
+        }
+        .drpdwn-content a{
+            color: #000;
+            padding: 15px 20px;
+            text-decoration: none;
+            display: block;
+        }
+        .drpdwn:hover .drpdwn-content{
+            display: block;
+        }
+        .drpdwn-content a:hover{
+            background-color: rgba(0,255,0,0.5);
+        }
     </style>
 </head>
 <body>
@@ -43,7 +86,26 @@
             <li><a href="#">About</a></li>
             <li><a href="#">Departments</a></li>
             <li><a href="#">Gallery</a></li>
-            <li><a href="#">Login</a></li>
+            <li class="drpdwn"><a class="btn" href="#">Login</a>
+                <div class="drpdwn-content" style="right: 40px;">
+                <a href="#">Admin</a>
+                <a href="#">User</a>
+                </div></li>
+            
+        </ul>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li class="drpdwn" ><a href="#">Login</a>
+                <div class="drpdwn-content">
+                <a href="#">Admin</a>
+                <a href="#">User</a>
+                </div>
+            </li>
         </ul>
     </div>
 </body>
