@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: #082a3a;
+        }
+        .parent{
+            background-color: #1f6cab;
+            height: 80px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .parent h1{
+            text-align: center;
+            color: #ffffff;
+        }
+        .child{
+            display: none;
+        }
+        .child ul{
+            display: block;
+            list-style: none;
+        }
+        .child ul li{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        .child ul li a{
+            font-size: 30px;
+            text-decoration: none;
+            color: #fff;
+        }
+        .parent h1:hover{
+            color: #06345a;
+            cursor: pointer;
+        }
+        .parent:hover .child{
+            display: block;
+            background-color: rgba(31, 108, 171, 0.612);
+            width: 180px;
+            position: absolute;
+            top: 60px;
+            margin-left: 200px;
+        }
+        .child ul li a:hover{
+            color: #06345a;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <h1>Hello World!</h1>
+        <div class="child">
+            <ul>
+                <li><a href="#">item1</a></li>
+                <li><a href="#">item2</a></li>
+                <li><a href="#">item3</a></li>
+                <li><a href="#">item4</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

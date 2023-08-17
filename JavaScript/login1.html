@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Validation</title>
+</head>
+<body>
+    <div>
+        <form action="#" method="post" onsubmit="return login()" name="form1">
+            <input type="text" placeholder="Enter Username" name="username"> <br>
+            <input type="password" placeholder="Enter Password" name="password"> <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        function login(){
+            let a,b;
+            a=document.forms["form1"]["username"];
+            b=document.forms["form1"]["password"];
+            if(a.value==""){
+                window.alert("Please enter your username");
+                a.focus();
+                return false;
+            }
+            if(b.value==""){
+                window.alert("Please enter your password");
+                b.focus();
+                return false;
+            }
+
+            if(a.value=="admin"&&b.value=="password"){
+                window.alert("Login Successful");
+                return true;
+            }
+            else{
+                window.alert("Incorrect Username  and Password");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

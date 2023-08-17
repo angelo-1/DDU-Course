@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-color: #082a3a;
+        }
+        .navbar{
+            width: 100%;
+            height: 80px;
+            background-color: #1f6cab;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .navbar ul{
+            list-style: none;
+            display: flex;
+        }
+        .navbar ul li{
+            padding: 10px 30px;
+            font-size: 20px;
+            color: #ffffff;
+        }
+        .parent{
+            display: none;
+            position: absolute;
+            background-color: rgba(31, 108, 171, 0.612);
+            
+        }
+        .parent ul{
+            display: block;
+            list-style: none;
+            position: absolute;
+            background-color: rgba(31, 108, 171, 0.612); 
+            width: 180px;
+        }
+        .parent ul li{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+            color: #fff;
+        }
+        .navbar ul li:hover{
+            color: #06345a;
+            cursor: pointer;
+        }
+        .navbar ul li:hover .parent{
+            display: block;
+            width: 180px;
+            position: absolute;
+            top: 60px;
+        }
+        .parent ul li a:hover{
+            color: #06345a;
+            background-color: aquamarine;
+        }
+        .child{
+            display: none;
+            position: absolute;
+            background-color: rgba(31, 108, 171, 0.612);
+        }
+        .child ul{
+            display: block;
+            list-style: none;
+            position: absolute;
+            background-color: rgba(31, 108, 171, 0.612); 
+        }
+        .child ul li{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+            color: #fff;
+        }
+        .parent ul li:hover{
+            color: #06345a;
+            cursor: pointer;
+        }
+        .parent ul li:hover .child{
+            display: block;
+            width: 180px;
+            position: absolute;
+            margin-top: 20px;
+            margin-left: 300px;
+        }
+        .child ul li a:hover{
+            color: #06345a;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li>Arts
+                <div class="parent">
+                    <ul>
+                        <li>B.A Malayalam
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>B.A English
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>B.A Economics
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>B.A Music
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>B.A Sociology
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>Science
+                <div class="parent">
+                    <ul>
+                        <li>Bsc Mathamatics
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>Bsc Chemistry
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>Bsc Physics
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>Bsc Botony
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>Bsc CS
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>Engineering
+                <div  class="parent">
+                    <ul>
+                        <li>CS
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>EEE
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>ECE
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>CE
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>ME
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>Paramedical
+                <div class="parent">
+                    <ul>
+                        <li>B.Pharm
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>Pharm.D
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>MLT
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>MIT
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>Radiology
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>Medical
+                <div  class="parent">
+                    <ul>
+                        <li>Bsc Nursing
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>MBBS
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>BAMS
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>BDS
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>BHMS
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>Commerce
+                <div class="parent">
+                    <ul>
+                        <li>Bcom
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>BAF
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>BOE
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>BFM
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>CA
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>Management
+                <div class="parent">
+                    <ul>
+                        <li>BBA
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>HRM
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>BCA
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>BMS
+                            <div class="child">
+                                <ul>
+                                    <li>book1</li>
+                                    <li>book2</li>
+                                    <li>book3</li>
+                                    <li>book4</li>
+                                    <li>book5</li>
+                                </ul>
+                            </div>  
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
