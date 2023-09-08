@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        body{
+            height: 100vh;
+            display: grid;
+            grid-gap: 5px;
+            place-items: center;
+            grid-template-columns: repeat(3,1fr)
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            display: grid;
+            place-items: center;
+            position: relative;
+        }
+        .div1{
+            border-radius: 50%;
+            animation-name: rounds;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        .one{
+            background: linear-gradient(#1f5597,#a31515);
+        }
+        .two{
+            background: linear-gradient(#d6d034,#1f8e2c);
+        }
+        .three{
+            background: linear-gradient(#b948bd,#871616);
+        }
+        @keyframes rounds{
+            0%{
+                left: 0px;
+                transform:translate(0px,0px) rotate(0deg);
+            }
+            25%{
+                left: 0px;
+                top: 0px;
+                transform:translate(50px,50px) rotate(90deg);
+            }
+            50%{
+                left: 200px;
+                top: 0px;
+                transform:translate(-100px,-100px) rotate(180deg);
+            }
+            75%{
+                left: 200px;
+                top: 200px;
+                transform:translate(100px,100px) rotate(270deg);
+            }
+            100%{
+                left: 0px;
+                top: 0px;
+                transform:translate(0px,0px) rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="div1 one"><p style="color: white;">---This is a div-1---</p></div>
+    <div class="div1 two"><p style="color: white;">---This is a div-1---</p></div>
+    <div class="div1 three"><p style="color: white;">---This is a div-1---</p></div>
+    
+</body>
+</html>

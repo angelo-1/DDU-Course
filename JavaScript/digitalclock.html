@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        @font-face{
+ font-family:'ticking-timebomb-bb';
+ src: url('./ticking-timebomb-bb.regular.ttf');
+}
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'ticking-timebomb-bb';
+            box-sizing: border-box;
+        }
+        body{
+            height: 700px;
+            width: 100%;
+            background-color: rgb(37, 34, 34);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .clock{
+            display: flex;
+            background-color: black;
+            border: 3px inset white;
+            padding: 30px;
+            width: 400px;
+            height: 100px;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .clock label{
+            color: #ffffff;
+            font-size: 90px;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <label><span id="hours">00</span>:</label>
+        <label><span id="minutes">00</span>:</label>
+        <label><span id="seconds">00</span></label>
+        <label style="margin-left: 20px;"> <span id="am_pm">AM</span></label>
+    </div>
+    <script>
+        window.onload=function(){
+            showTime();
+                 
+        }
+
+        function showTime(){
+            var now=new Date();
+            var hour=now.getHours(),
+                min=now.getMinutes(),
+                sec=now.getSeconds(),
+                pe="AM";
+
+                if(hour == 0){
+                    hour =12;
+                }
+                if(hour>=12){
+                    if(hour==12){
+                        hour=hour;
+                    }
+                    else{
+                    hour =hour-12;
+                    }
+                    pe ="PM";
+                }
+                hour=(hour<10)?hour="0"+hour:hour;
+                min=(min<10)?min="0"+min:min;
+                sec=(sec<10)?sec="0"+sec:sec;
+                var ids =["hours","minutes","seconds","am_pm"];
+                var values =[hour,min,sec,pe];
+                for(var i=0; i<ids.length; i++)
+                document.getElementById(ids[i]).firstChild.nodeValue= values[i];
+            setInterval(showTime,1000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Date Methods</title>
+</head>
+<body>
+    <div>
+        <h3 id="date"></h3>
+        <h3 id="date1"></h3>
+        <h3 id="day"></h3>
+        <h3 id="year"></h3>
+        <h3 id="month"></h3>
+        <h3 id="hours"></h3>
+        <h3 id="minutes"></h3>
+        <h3 id="seconds"></h3>
+        <h3 id="time"></h3>
+    </div>
+    <script>
+        var a=new Date();
+        var b=a.getDate();
+        var c=a.getDay();
+        var d=a.getFullYear();
+        var e=a.getMonth();
+        var f=a.getHours();
+        var g=a.getMinutes();
+        var h=a.getSeconds();
+        var i=a.getTime();
+        document.getElementById("date").innerHTML=a;
+        document.getElementById("date1").innerHTML=b;
+        document.getElementById("day").innerHTML=c;
+        document.getElementById("year").innerHTML=d;
+        document.getElementById("month").innerHTML=e;
+        document.getElementById("hours").innerHTML=f;
+        document.getElementById("minutes").innerHTML=g;
+        document.getElementById("seconds").innerHTML=h;
+        document.getElementById("time").innerHTML=i;
+    </script>
+</body>
+</html>

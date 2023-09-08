@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+</head>
+<body>
+    <h2 id="loop-1"></h2>
+
+    <h2 id="pattern"></h2>
+
+    <h2 id="pattern-1"></h2>
+
+    <h2 id="pattern-2"></h2>
+
+    <h2 id="sumofseries"></h2>
+
+    <h2 id="sumofdg"></h2>
+
+    <script>
+        var a="";
+        for(let k=0;k<=100;k++){
+            a+=k+"<br>";
+            document.getElementById("loop-1").innerHTML=a;
+
+        }
+        var b="";
+            for(let i=0;i<=5;i++){
+                for(let j=i;j<=5;j++){
+                    b+="*";
+                    
+                    document.getElementById("pattern").innerHTML=b;
+                }
+                b+="<br>";
+                
+
+            }
+        var c="";
+        for(let i=0;i<=5;i++){
+            for(let j=0;j<=i;j++){
+                c+="*";
+                document.getElementById("pattern-1").innerHTML=c;
+            }
+            c+="<br>";
+        }
+        var d=0;
+        for(let i=0;i<=100;i++){
+            d+=i;
+            document.getElementById("sumofseries").innerHTML=d;
+        }
+
+        var e="";
+        var r=6;
+        for(let i=1;i<=r;i++){
+            for(let j=1;j<=r-i;j++){
+                e+=" ";
+                document.getElementById("pattern-2").innerHTML=e;
+            }
+            for(let k=0;k<i;k++){
+                    e+="*";
+                    
+                }
+            e+="<br>";
+            
+        }
+        document.getElementById("pattern-2").innerHTML=e;
+
+        var sum=0;
+        let n=123;
+        while (n!=0){
+            sum+=n%10;
+            n=Math.floor(n/10);
+        }
+        document.getElementById("sumofdg").innerHTML=sum;
+
+
+    </script>
+</body>
+</html>

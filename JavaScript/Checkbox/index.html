@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select box</title>
+</head>
+<body>
+    <div>
+        <form action="#">
+        <label>Semester</label>
+        <br>
+        <select name="sems" id="firstbox" required onchange="changebox()">
+            <option value="" disabled selected hidden>Select</option>
+            <option value="first">1st sem</option>
+            <option value="second">2nd sem</option>
+            <option value="third">3rd sem</option>
+            <option value="fourth">4th sem</option>
+            <option value="fifth">5th sem</option>
+            <option value="sixth">6th sem</option>
+        </select>
+        <br>
+        <br>
+        <label>Subjects</label>
+        <br>
+        <select name="" id="secondbox">
+            <option value="" disabled selected hidden>Select</option>
+        </select>
+    </form>
+    <br><br>
+    <form>
+        <label>State</label>
+        <select id="state">
+            <option >select</option>
+            <option value="kerala" id="kerala">kerala</option>
+            <option value="tamilnadu" id="tamilnadu">tamilnadu</option>
+            <option value="andhra">Andhra</option>
+        </select>
+        <br> <br>
+        <label >District</label>
+        <select name="kerala" id="keralabox">
+            <option value="malappuram">malappuram</option>
+            <option value="palakad">palakad</option>
+            <option value="kollam">kollam</option>
+            <option value="idukki">idukki</option>
+        </select>
+        <select name="tamilnadu" id="tamilnadubox">
+            <option value="karur">karur</option>
+            <option value="coimbatore">coimbatore</option>
+            <option value="erode">Erode</option>
+            <option value="Madurai">Madurai</option>
+            <option value="Chennai">Chennai</option>
+        </select>
+    </form>
+    <br><br>
+    <form action="#">
+        <select name="degree" id="degree">
+            <option value="">Select</option>
+            <option value="mang">MANAGEMENT</option>
+            <option value="bsc">BSC</option>
+            <option value="btech">Btech</option>
+        </select>
+        <br>
+        <br>
+        <select name="manage" id="mange">
+            <option value="">select</option>
+            <option value="bca">BCA</option>
+            <option value="bba">BBA</option>
+        </select>
+        <select name="bsc" id="bsc">
+            <option value="">select</option>
+            <option value="physics">Physics</option>
+            <option value="Maths">Maths</option>
+        </select>
+    </form>
+    </div>
+    <script>
+        var c={
+            first:["c","cpp","MySql"],
+            second:["php","python","java"],
+            third:["django",".net","Nodejs"],
+            fourth:["reactjs","angular","odoo"],
+            fifth:["springboot","bootstarp","mongoDB"], 
+            sixth:["Expressjs","flask","kotlin"],
+
+        };
+        function changebox(){
+            var a=document.getElementById("firstbox").value;
+            var b=document.getElementById("secondbox");
+            var d=c[a]
+            b.innerHTML="";
+            d.forEach(optiontext => {
+                var option=document.createElement("option");
+                option.value=optiontext;
+                option.textContent=optiontext;
+                b.appendChild(option);
+            });
+        }
+
+            var h=document.getElementById('state');
+            h.addEventListener("change",funname);
+            funname();
+            
+        
+        function funname(){
+            var h=document.getElementById('state').value;
+            var j=document.getElementById('kerala').value;
+            var k=document.getElementById('tamilnadu').value;
+            
+            if(h==j){
+                document.getElementById('keralabox').style.display="block";
+            }else{
+                document.getElementById('keralabox').style.display="none"; 
+            }
+            if(h==k){
+                document.getElementById('tamilnadubox').style.display="block";
+            }else{
+                document.getElementById('tamilnadubox').style.display="none";
+            }
+        }
+        
+        window.onload=function(){
+            document.getElementById('mange').style.display="none";
+            document.getElementById('bsc').style.display="none";
+        }
+
+        document.getElementById("degree").addEventListener("change",changedegree);
+        
+        function changedegree(){
+            let l=document.getElementById("degree").value;
+            if(l=="mang"){
+                document.getElementById('mange').style.display="block";
+            }
+            else{
+                document.getElementById('mange').style.display="none";
+            }
+            if(l=="bsc"){
+                document.getElementById('bsc').style.display="block";
+            }
+            else{
+                document.getElementById('bsc').style.display="none";
+            }
+        }
+    </script>
+</body>
+</html>

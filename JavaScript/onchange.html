@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnChange Events</title>
+</head>
+<body>
+    <form action="#" method="post" name="form-1">
+        <label>Enter Number Of Working Days</label>
+        <input type="number"  id="working">
+        <label>Enter Number Of leave Days</label>
+        <input type="number"  id="leave">
+        <label>Enter Number Per Day Salary</label>
+        <input type="number"  id="oneday" onchange="funname()">
+        <label>Your Working Day</label>
+        <input type="number"  id="total" readonly>
+        <label>Your Salary</label>
+        <input type="number"  id="salary" readonly>
+        
+    </form>
+
+    <script>
+        function funname(){
+            let a,b,c,d,e;
+            a=document.getElementById("working").value;
+            b=document.getElementById("leave").value;
+            c=document.getElementById("oneday").value;
+            d=a-b;
+            e=d*c;
+            document.getElementById("total").value=d;
+            document.getElementById("salary").value=e;
+        }
+    </script>
+</body>
+</html>

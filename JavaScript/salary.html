@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Slip</title>
+    <style>
+        .main{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            padding:40px 100px;
+            border: 2px solid black;
+            width: 500px;
+            margin-top: 70px;
+        }
+        form input{
+            height: 30px;
+            margin-top: 5px;
+        }
+        form label{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1 style="text-align: center; position: absolute; left: 45%;">Salary Slip</h1>
+    <div>
+        <form action="" method="post" name="form-1">
+        <label>Employee Name</label>
+        <input type="text" >
+        <label>Emp Id</label>
+        <input type="text" >
+        <label>Basic Salary</label>
+        <input type="number"  id="basicsal">
+        <label>House Rent Allowances</label>
+        <input type="number"  id="houseallow">
+        <label>Conveyance Allowances</label>
+        <input type="number"  id="convallow">
+        <label>Medical Allowances</label>
+        <input type="number"  id="medallow">
+        <label>Special Allowances</label>
+        <input type="number"  id="spclallow" onchange="growsal()">
+        <br>
+        <label>Gross Salary</label>
+        <input type="number"  id="growsalary" readonly>
+        </form>
+    </div>
+    <div>
+        <form action="" method="post" name="form-2">
+        <label>EPF</label>
+        <input type="number"  id="epf">
+        <label>Health Insurance</label>
+        <input type="number"  id="insure">
+        <label>Professional Tax</label>
+        <input type="number"  id="proftax" onchange="netsal()">
+        <br>
+        <br>
+        <br>
+        <label>Total Deductions</label>
+        <input type="number"  id="total" readonly>
+        <br><br><br>
+        <label>Net Pay</label>
+        <input type="number"  id="netpay" readonly>
+        </form>
+    </div>
+    </div>
+    <script>
+        var grow;
+        function growsal(){
+                let a,b,c,d,e;
+                a=document.getElementById("basicsal").value;
+                b=document.getElementById("houseallow").value;
+                c=document.getElementById("convallow").value;
+                d=document.getElementById("medallow").value;
+                e=document.getElementById("spclallow").value;
+                a=parseInt(a);
+                b=parseInt(b);
+                c=parseInt(c);
+                d=parseInt(d);
+                e=parseInt(e);
+                grow=a+b+c+d+e;
+                document.getElementById("growsalary").value=grow; 
+        }
+       
+        function netsal(){
+                let f,g,h,total,net;
+                f=parseInt(document.getElementById("epf").value);
+                g=parseInt(document.getElementById("insure").value);
+                h=parseInt(document.getElementById("proftax").value);
+                total=f+g+h;
+                net=grow-total;
+                document.getElementById("total").value=total;
+                document.getElementById("netpay").value=net;
+                }
+        
+    </script>
+</body>
+</html>
