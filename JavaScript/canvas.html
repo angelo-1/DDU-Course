@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body onload="funname()">
+    <canvas width="600px" height="400px" style="border: 4px solid green;" id="canvas">
+
+    </canvas>
+    <script>
+        function funname(){
+            var myCanvas=document.getElementById("canvas");
+            context=myCanvas.getContext("2d");
+            context.fillStyle="red";
+            context.fillRect(150,100,300,200)
+            context.fillStyle="rgba(255,0,0,0.4)";
+            context.fillRect(170,120,300,200)
+            context.shadowBlur=20;
+            context.shadowColor="green"
+            context.fillStyle="yellow";
+            context.beginPath();
+            context.arc(300, 200, 80, 0, 2 * Math.PI);
+            context.fill();
+            context.beginPath();
+            context.strokeStyle="brown";
+            context.arc(260, 180, 7, 0, 2 * Math.PI);
+            context.stroke();
+            context.beginPath();
+            context.strokeStyle="brown";
+            context.arc(340, 180, 7, 0, 2 * Math.PI);
+            context.stroke();
+            context.beginPath();
+            context.fillStyle="brown";
+            context.arc(300, 225, 30,0, 1 * Math.PI);
+            context.fill();
+            context.beginPath();
+            context.strokeStyle="brown";
+            context.moveTo(300,190);
+            context.lineTo(300,220)
+            context.stroke();
+            
+        }
+    </script>
+</body>
+</html>

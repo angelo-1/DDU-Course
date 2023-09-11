@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aquamarine;
+            overflow: hidden;
+        }
+        .container{
+            width: 600px;
+            height: 250px;
+            border-bottom: 4px solid white;
+            overflow: hidden;
+            color: #fff;
+            position: relative;
+        }
+        .mtn{
+            height: 4px;
+            width: 4px;
+            position: absolute;
+            right: 90px;
+            bottom: 20px;
+            background-color: black;
+            box-shadow:
+                0 0 0 50px #4DB6AC,
+                60px 50px 0 70px #4DB6AC,
+                90px 90px 0 50px #4DB6AC,
+                250px 250px 0 50px #4DB6AC;
+                /* 290px 320px 0 50px #4DB6AC, */
+                /* 320px 400px 0 50px #4DB6AC; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mtn"></div>
+        <div class="hill"></div>
+        <div class="tree"></div>
+        <div class="tree"></div>
+        <div class="tree"></div>
+        <div class="rock"></div>
+        <div class="car"></div>
+        <div class="wheels"></div>
+    </div>
+</body>
+</html>
