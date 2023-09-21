@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Game</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            height: 80%;
+            width: 80%;
+            border: 2px solid black;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+        }
+        .word, .spell{
+            height: 40%;
+            width: 80%;
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+        }
+        .letter{
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgb(233,223,196);
+            background: -moz-linear-gradient(left, rgba(233,223,196,1) 0%, rgba(233,223,196,1) 1%, rgba(237,227,200,1) 2%, rgba(237,227,200,1) 24%, rgba(235,221,195,1) 25%, rgba(233,223,196,1) 48%, rgba(235,221,195,1) 49%, rgba(230,216,189,1) 52%, rgba(230,216,189,1) 53%, rgba(233,219,192,1) 54%, rgba(230,216,189,1) 55%, rgba(230,216,189,1) 56%, rgba(233,219,192,1) 57%, rgba(230,216,189,1) 58%, rgba(230,216,189,1) 73%, rgba(233,219,192,1) 74%, rgba(233,219,192,1) 98%, rgba(235,221,195,1) 100%);
+            background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(233,223,196,1)), color-stop(1%,rgba(233,223,196,1)), color-stop(2%,rgba(237,227,200,1)), color-stop(24%,rgba(237,227,200,1)), color-stop(25%,rgba(235,221,195,1)), color-stop(48%,rgba(233,223,196,1)), color-stop(49%,rgba(235,221,195,1)), color-stop(52%,rgba(230,216,189,1)), color-stop(53%,rgba(230,216,189,1)), color-stop(54%,rgba(233,219,192,1)), color-stop(55%,rgba(230,216,189,1)), color-stop(56%,rgba(230,216,189,1)), color-stop(57%,rgba(233,219,192,1)), color-stop(58%,rgba(230,216,189,1)), color-stop(73%,rgba(230,216,189,1)), color-stop(74%,rgba(233,219,192,1)), color-stop(98%,rgba(233,219,192,1)), color-stop(100%,rgba(235,221,195,1)));
+            background: -webkit-linear-gradient(left, rgba(233,223,196,1) 0%,rgba(233,223,196,1) 1%,rgba(237,227,200,1) 2%,rgba(237,227,200,1) 24%,rgba(235,221,195,1) 25%,rgba(233,223,196,1) 48%,rgba(235,221,195,1) 49%,rgba(230,216,189,1) 52%,rgba(230,216,189,1) 53%,rgba(233,219,192,1) 54%,rgba(230,216,189,1) 55%,rgba(230,216,189,1) 56%,rgba(233,219,192,1) 57%,rgba(230,216,189,1) 58%,rgba(230,216,189,1) 73%,rgba(233,219,192,1) 74%,rgba(233,219,192,1) 98%,rgba(235,221,195,1) 100%);    
+            background: -o-linear-gradient(left, rgba(233,223,196,1) 0%,rgba(233,223,196,1) 1%,rgba(237,227,200,1) 2%,rgba(237,227,200,1) 24%,rgba(235,221,195,1) 25%,rgba(233,223,196,1) 48%,rgba(235,221,195,1) 49%,rgba(230,216,189,1) 52%,rgba(230,216,189,1) 53%,rgba(233,219,192,1) 54%,rgba(230,216,189,1) 55%,rgba(230,216,189,1) 56%,rgba(233,219,192,1) 57%,rgba(230,216,189,1) 58%,rgba(230,216,189,1) 73%,rgba(233,219,192,1) 74%,rgba(233,219,192,1) 98%,rgba(235,221,195,1) 100%);  
+            background: -ms-linear-gradient(left, rgba(233,223,196,1) 0%,rgba(233,223,196,1) 1%,rgba(237,227,200,1) 2%,rgba(237,227,200,1) 24%,rgba(235,221,195,1) 25%,rgba(233,223,196,1) 48%,rgba(235,221,195,1) 49%,rgba(230,216,189,1) 52%,rgba(230,216,189,1) 53%,rgba(233,219,192,1) 54%,rgba(230,216,189,1) 55%,rgba(230,216,189,1) 56%,rgba(233,219,192,1) 57%,rgba(230,216,189,1) 58%,rgba(230,216,189,1) 73%,rgba(233,219,192,1) 74%,rgba(233,219,192,1) 98%,rgba(235,221,195,1) 100%);
+            background: linear-gradient(left, rgba(233,223,196,1) 0%,rgba(233,223,196,1) 1%,rgba(237,227,200,1) 2%,rgba(237,227,200,1) 24%,rgba(235,221,195,1) 25%,rgba(233,223,196,1) 48%,rgba(235,221,195,1) 49%,rgba(230,216,189,1) 52%,rgba(230,216,189,1) 53%,rgba(233,219,192,1) 54%,rgba(230,216,189,1) 55%,rgba(230,216,189,1) 56%,rgba(233,219,192,1) 57%,rgba(230,216,189,1) 58%,rgba(230,216,189,1) 73%,rgba(233,219,192,1) 74%,rgba(233,219,192,1) 98%,rgba(235,221,195,1) 100%);
+            background-size: 120px;
+            background-repeat: repeat;
+        }
+        .letter h1{
+            font-size: 100px;
+            background-color: #004222;
+            background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-family: Arial, Helvetica, sans-serif;">Arrange The Letters To Get A Word</h1>
+        <div class="word">
+            <div class="letter" id="lett1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="letter" id="lett2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="letter" id="lett3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="letter" id="lett4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="letter" id="lett5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="spell">
+            <div class="letter" id="letter1" ondrop="drop(event)" ondragover="allowDrop(event)"><h1 draggable="true" ondragstart="drag(event)" id="drag1">E</h1></div>
+            <div class="letter" id="letter2" ondrop="drop(event)" ondragover="allowDrop(event)"><h1 draggable="true" ondragstart="drag(event)" id="drag2">L</h1></div>
+            <div class="letter" id="letter3" ondrop="drop(event)" ondragover="allowDrop(event)"><h1 draggable="true" ondragstart="drag(event)" id="drag3">H</h1></div>
+            <div class="letter" id="letter4" ondrop="drop(event)" ondragover="allowDrop(event)"><h1 draggable="true" ondragstart="drag(event)" id="drag4">O</h1></div>
+            <div class="letter" id="letter5" ondrop="drop(event)" ondragover="allowDrop(event)"><h1 draggable="true" ondragstart="drag(event)" id="drag5">L</h1></div>
+        </div>
+    </div>
+    <script>
+        function allowDrop(e) {
+          e.preventDefault();
+        }
+        
+        function drag(e) {
+          e.dataTransfer.setData("text", e.target.id);
+        }
+        
+        function drop(e) {
+          e.preventDefault();
+          var data = e.dataTransfer.getData("text");
+          e.target.appendChild(document.getElementById(data));
+        }
+        </script>
+</body>
+</html>
