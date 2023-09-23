@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background-color: blueviolet;
+        }
+        button{
+            padding: 15px;
+            opacity: 0.75;
+            width: 100px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        button:focus{
+            opacity: 1;
+        }
+        h2{
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button style="background-color: aqua;" onclick="funOne()">Fun-1</button>
+        <h2 id="printOne"></h2>
+        <br> <br>
+        <button style="background-color: bisque;" onclick="funTwo()">Fun-2</button>
+        <h2 id="printTwo"></h2>
+    </div>
+    <script>
+        function funOne(){
+            var a="";
+            for(let k=0;k<=100;k++){
+                a+=k+" ";
+                document.getElementById("printOne").innerHTML=a;
+
+            }
+        }
+
+        const printTwo = document.getElementById('printTwo');
+        function funTwo() {
+         printTwo.innerHTML = '';
+        let i = 1;
+        const intervalId = setInterval(() => {
+            if (i <= 500) {
+                const numberElement = document.createElement('span');
+                numberElement.textContent = i + ' ';
+                printTwo.appendChild(numberElement);
+                i++;
+            } else {
+                clearInterval(intervalId);
+            }
+        }, 100); 
+        }
+    </script>
+</body>
+</html>

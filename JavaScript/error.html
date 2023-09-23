@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demoo"></p>
+    <button onclick="clicks()">Click</button>
+<script>
+    function clicks(){
+        
+        try {
+            let num=prompt("Enter a number");
+            if(num=="")throw prompt("plese enter a number");
+            if(isNaN(num))throw prompt("plese enter a number");
+            document.getElementById("demo").innerHTML=num**2;
+            // document.getElementById("demo").innerHTML=num;
+
+        } catch (error) {
+            document.getElementById("demoo").innerHTML=error;
+        }
+        finally{
+            document.getElementById("demoo").innerHTML="good byee!"
+        }
+    }
+</script>
+
+</body>
+</html>
