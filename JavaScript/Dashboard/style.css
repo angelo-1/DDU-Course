@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: bisque;
+}
+.main{
+    display: grid;
+    grid-template-areas: 
+    'header header header header'
+    'aside article article article'
+    'footer footer footer footer';
+}
+.navbar{
+    background-image: linear-gradient(to right,#6e45e2,#88d3ce);
+    
+    width: 100%;
+    height: 80px;
+    grid-area: header;
+}
+.sidebar{
+    background-color: #88d3ce;
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+.sidebar ul{
+    display: inline-block;
+}
+.sidebar ul li{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.sidebar ul li button{
+    width: 80%;
+    background-color: #6e45e2;
+    border: 2px solid black;
+    height:40px ;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.sidebar ul li span{
+    width: 80%;
+    border: 2px solid black;
+    background-color: #6e45e2;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+button:hover{
+    transform: scale(0.95);
+}
+ul li span:hover{
+    transform: scale(0.95);
+}
+.sidebar ul li:hover .drpdwn-content{
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 190px;
+    background-color: #88d3ce;
+}
+.drpdwn-content{
+    display: none;
+}
+.drpdwn-content button{
+    margin: 10px;
+    width: 200px;
+}
+.details{
+    height: 80vh;
+    background-color: #6e45e2;
+    grid-area: article;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    animation-name: change;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
+@keyframes change{
+    from{
+        opacity: 0.8;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.details p{
+    font-size: 25px;
+    color: whitesmoke;
+}
+.details h1{
+    color: whitesmoke;
+    font-size: 30px;
+}
+.footers{
+    background-color: black;
+    grid-area: footer;
+    height: 100px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+

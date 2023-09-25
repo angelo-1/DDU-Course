@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h2 id="demo"></h2>
+    <h2 id="demoo"></h2>
+    <h2 id="demo3d"></h2>
+    <script>
+        let states=["Kerala","Karnataka","Tamilnadu"];
+        states[1]="Telungana"
+        document.getElementById("demo").innerHTML=states;
+        let statess=new Array();
+        statess[0]="Kerala";
+        statess[1]="Tamilnadu";
+        statess[2]="Karnataka";
+        document.getElementById("demoo").innerHTML=statess+"  "+statess.length;
+        let matrix=[[["a","b","c"],["d","e","f"],["g","h","i"]],[["j","k","l"],["m","n","o"],["p","q","r"]]];
+        document.getElementById("demo3d").innerHTML=matrix[0][1][2];
+    </script>
+</body>
+</html>

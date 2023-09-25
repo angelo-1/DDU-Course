@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Tasks</title>
+</head>
+<body>
+    <h1>Sum and average of an array</h1>
+    <h2>Array:<span id="firstarray"></span></h2>
+    <h2 id="sumofarray"></h2>
+    <h2 id="averagearray"></h2>
+    <h1>Sorting of an array</h1>
+    <h2 id="sortarray"></h2>
+    <h1>Searching Element in an array</h1>
+    <h2 id="searchno"></h2>
+    <h2 id="searcharray"></h2>
+    <h1>Remove duplicates in an array</h1>
+    <h2 id="removedup"></h2>
+    <script>
+        let numbers = [6, 4, 2, 4, 8, 5, 7, 8];
+        let num=numbers.length;
+        let sum = 0;
+        for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+        }
+        let avg= sum / num;
+        document.getElementById("firstarray").innerHTML=numbers;
+        document.getElementById("sumofarray").innerHTML="Sum:"+sum;
+        document.getElementById("averagearray").innerHTML="Average:"+avg;
+
+
+        let sorted=numbers.sort();
+        document.getElementById("sortarray").innerHTML="Sorted array is:"+sorted;
+
+
+        let n=7;
+        // let index = -1;
+        document.getElementById("searchno").innerHTML=n;
+        for(let j=0;j<=numbers.length;j++){
+            if(numbers[j]===n){
+                let index=j;
+                document.getElementById("searcharray").innerHTML="The number Exists and the index number is:"+index;
+                break;
+            }
+            else{
+                document.getElementById("searcharray").innerHTML="not found"
+            }
+        }
+
+
+        let dupl=[];
+        for(let k=0;k<=numbers.length;k++){
+            if(dupl.indexOf(numbers[k])===-1){
+                dupl.push(numbers[k]);
+            }
+        }
+           document.getElementById("removedup").innerHTML=dupl;
+    </script>
+</body>
+</html>
