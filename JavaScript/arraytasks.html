@@ -17,6 +17,12 @@
     <h2 id="searcharray"></h2>
     <h1>Remove duplicates in an array</h1>
     <h2 id="removedup"></h2>
+    <h1>Sum and average of an array in 2d</h1>
+    <h2>Array:<span id="firstarrays"></span></h2>
+    <h2 id="sumofarrays"></h2>
+    <h2 id="averagearrays"></h2>
+    <h1>Sorting of a 2d array</h1>
+    <h2 id="sortarrays"></h2>
     <script>
         let numbers = [6, 4, 2, 4, 8, 5, 7, 8];
         let num=numbers.length;
@@ -56,6 +62,28 @@
             }
         }
            document.getElementById("removedup").innerHTML=dupl;
+
+
+        let numberss = [
+            [6, 4, 2],
+            [4, 8, 5],
+            [7, 8, 9],
+        ];
+
+        let sums = 0;
+        for (let m = 0; m < numberss.length; m++) {
+            for(let l=0;l<numberss[m].length;l++){
+                sums += numberss[m][l];
+            }
+        }
+        let numarray=numberss.flat();
+        let avgs=sums/numarray.length;
+        
+        document.getElementById("firstarrays").innerHTML=numberss;
+        document.getElementById("sumofarrays").innerHTML="Sum:"+sums;
+        document.getElementById("averagearrays").innerHTML="Average:"+avgs;
+
+        
     </script>
 </body>
 </html>

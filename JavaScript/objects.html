@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <h2 id="carss"></h2>
+    <h2 id="cars"></h2>
+    <h2 id="cars1"></h2>
+    <script>
+        let car = {type:"Fiat", model:"500", color:"white"};
+            car.driver="angelo"
+        document.getElementById("carss").innerHTML=car.type;
+        document.getElementById("cars").innerHTML=car["model"];
+        let car1="";
+        for(let i in car){
+            car1 += car[i]+" ";
+            // car1+=i+" "
+        }
+        document.getElementById("cars1").innerHTML=car1;
+    </script>
+</body>
+</html>
