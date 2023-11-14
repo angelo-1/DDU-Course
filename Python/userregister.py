@@ -1,4 +1,4 @@
-#!C:/Users/angelo/AppData/Local/Programs/Python/Python311/python.exe
+#!C:/Users/pc/AppData/Local/Programs/Python/Python311/python.exe
 print("content-type:text/html \r\n\r\n")
 import pymysql
 import cgi
